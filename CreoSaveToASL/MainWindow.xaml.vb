@@ -99,21 +99,7 @@ Class MainWindow
         Try
 
             Dim macrostring As String
-            macrostring = "~ Trail `UI Desktop` `UI Desktop` `PREVIEW_POPUP_TIMER` \"
-            macrostring = macrostring & vbCrLf
-            macrostring = macrostring & "`main_dlg_w1:PHTLeft.AssyTree:<NULL>`;~ Select `main_dlg_cur` `appl_casc`;\"
-            macrostring = macrostring & vbCrLf
-            macrostring = macrostring & "~ Close `main_dlg_cur` `appl_casc`;~ Command `ProCmdRibbonOptionsDlg` ;\"
-            macrostring = macrostring & vbCrLf
-            macrostring = macrostring & "~ Select `ribbon_options_dialog` `PageSwitcherPageList` 1 `colors_layouts`;\"
-            macrostring = macrostring & vbCrLf
-            macrostring = macrostring & "~ Open `ribbon_options_dialog` `colors_layouts.Color_scheme_optMenu`;\"
-            macrostring = macrostring & vbCrLf
-            macrostring = macrostring & "~ Close `ribbon_options_dialog` `colors_layouts.Color_scheme_optMenu`;\"
-            macrostring = macrostring & vbCrLf
-            macrostring = macrostring & "~ Select `ribbon_options_dialog` `colors_layouts.Color_scheme_optMenu` 1 `2`;\"
-            macrostring = macrostring & vbCrLf
-            macrostring = macrostring & "~ Activate `ribbon_options_dialog` `OkPshBtn`;"
+            macrostring = macrostring & "%_theme_bw;"
 
 
             session.RunMacro(macrostring)
@@ -123,6 +109,7 @@ Class MainWindow
         End Try
 
     End Sub
+
     Private Function GetRasterInstructions(ByVal type As Integer,
                                        ByVal rasterWidth As Double,
                                        ByVal rasterHeight As Double,
